@@ -1,0 +1,41 @@
+{{>head}}
+{{>nombre}}
+{{>menu}}
+
+<div class="container">
+  <div class="text-center">
+  <br><br>
+      <div class="text-center">
+      <h1>Cursos disponibles</h1>
+    </div>
+  <br>
+  <table class="table table-striped">
+  <thead>
+{{{listar_sencillo}}}
+
+<br><br><br>
+
+<h4>Escoge un curso para conocer más información:</h4>
+
+<br>
+
+  <form action="/info" method="post">
+
+    <div class="form-row">
+      <div class="form-group col-md-12">
+      <label for="input_curso"></label>
+      <select name="curso" class="form-control">
+        <option selected>Selecciona...</option>
+        {{{opciones}}}
+      </select>
+    </div>
+    </div>
+
+    <button type="Mirar Detalles" class="btn btn-info">Mirar Detalles</button>
+  </form>
+  <br><br>
+</div>
+</div>
+
+
+{{>foot}}

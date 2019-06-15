@@ -1,0 +1,61 @@
+{{>head}}
+{{>nombre}}
+{{>menu}}
+
+<div class="container">
+  <br>
+  <br>
+    <div class="text-center">
+      <h2>Formulario de Inscripción</h2><br>
+      <p>Registra tus datos en este formulario<br>Los datos con asterisco (*) son obligatorios</p>
+    </div>
+  </br>
+
+  <form action="/registrado" method="post">
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="input_nombre">Nombre Completo *</label>
+        <input type="text" class="form-control" name="nombre" placeholder="Nombre Completo" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="input_di">Documento de Indentidad *</label>
+        <input type="number" class="form-control" name="di" placeholder="Documento de Indentidad (Sin espacios o signos de puntuación)" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="input_correo">Correo Electrónico *</label>
+        <input type="email" class="form-control" name="correo" placeholder="Correo Electrónico" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="input_telefono">Teléfono *</label>
+        <input type="number" class="form-control" name="telefono" placeholder="Teléfono" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-12">
+      <label for="input_modalidad">Curso *</label>
+      <select name="curso" class="form-control">
+        <option selected>Selecciona...</option>
+        {{{opciones}}}
+      </select>
+    </div>
+    </div>
+
+    <br>
+
+    <div class="text-center">
+      <button type="Inscripcion" class="btn btn-success">Inscribirse</button>
+    </div>
+
+  </form>
+
+  <br>
+  <br>
+
+</div>
+
+{{>foot}}

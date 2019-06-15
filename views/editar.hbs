@@ -1,0 +1,112 @@
+{{>head}}
+{{>nombre}}
+{{>menu}}
+
+<div class="container">
+  <div class="text-center">
+  <br><br>
+      <div class="text-center">
+      <h1>Cursos Disponibles</h1>
+    </div>
+  <br>
+  <table class="table table-striped">
+  <thead>
+{{{listar}}}
+  <br><br>
+</div>
+</div>
+
+<div class="container">
+  <br><br>
+  <div class = "text-center">
+    <h1>Ver información de un curso</h1>
+  </div>
+  <br>
+    <form action="/informacion" method="post">
+
+      <div class="form-row">
+        <div class="form-group col-md-12">
+        <label for="input_modalidad">Seleccione el curso:</label>
+        <select name="curso" class="form-control">
+          <option selected>Selecciona...</option>
+          {{{opciones_1}}}
+        </select>
+      </div>
+      </div>
+
+        <br>
+      <div class="text-center">
+        <button type="Ver" class="btn btn-info">Ver información de este curso</button>
+      </div>
+        <br><br>
+
+    </form>
+</div>
+
+<div class="container">
+  <br><br>
+  <div class = "text-center">
+    <h1>Eliminar un estudiante</h1>
+  </div>
+  <br>
+    <form action="/eliminar" method="post">
+
+      <div class="form-row">
+        <div class="form-group col-md-12">
+        <label for="input_modalidad">Seleccione el curso:</label>
+        <select name="curso" class="form-control">
+          <option selected>Selecciona...</option>
+          {{{opciones_1}}}
+        </select>
+      </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="input_nombre">Nombre Completo</label>
+          <input type="text" class="form-control" name="nombre" placeholder="Nombre Completo" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="input_di">Documento de Indentidad</label>
+          <input type="number" class="form-control" name="di" placeholder="Documento de Indentidad (Sin espacios o signos de puntuación)" required>
+        </div>
+      </div>
+
+        <br>
+      <div class="text-center">
+        <button type="borrar_estudiante" class="btn btn-danger">Eliminar este estudiante</button>
+      </div>
+        <br><br>
+
+    </form>
+</div>
+
+<div class="container">
+  <br><br>
+  <div class = "text-center">
+    <h1>Cambiar de estado un curso</h1>
+  </div>
+  <br>
+    <form action="/cambiado" method="post">
+
+      <div class="form-row">
+        <div class="form-group col-md-12">
+        <label for="input_modalidad">Seleccione el curso:</label>
+        <select name="curso" class="form-control">
+          <option selected>Selecciona...</option>
+          {{{opciones_1}}}
+        </select>
+      </div>
+      </div>
+
+        <br>
+      <div class="text-center">
+        <button type="cerrar_curso" class="btn btn-warning">Cambiar el estado del curso</button>
+      </div>
+        <br><br>
+
+    </form>
+</div>
+
+
+{{>foot}}

@@ -1,0 +1,65 @@
+{{>head}}
+{{>nombre}}
+{{>menu}}
+
+<div class="container">
+  <br>
+  <br>
+    <div class="text-center">
+      <h2>Formulario para crear un curso</h2><br>
+      <p>Registra los datos del nuevo curso en este formulario<br>Los datos con asterisco (*) son obligatorios</p>
+    </div>
+  </br>
+
+  <form action="/creado" method="post">
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="input_id">ID del curso *</label>
+        <input type="number" class="form-control" name="id" placeholder="ID del Curso" required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="input_nombre">Nombre *</label>
+        <input type="text" class="form-control" name="nombre" placeholder="Nombre" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+      <label for="input_modalidad">Modalidad</label>
+      <select name="modalidad" class="form-control">
+        <option selected>...</option>
+        <option>Virtual</option>
+        <option>Presencial</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="input_valor">Valor *</label>
+      <input type="number" class="form-control" name="valor" placeholder="Valor" required>
+    </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-12">
+        <label for="input_descripcion">Descripción *</label>
+        <input type="text" class="form-control" name="descripcion" placeholder="Descripción" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="input_intensidad">Intensidad horaria</label>
+        <input type="number" class="form-control" name="intensidad" placeholder="Intensidad horaria">
+      </div>
+    </div>
+
+      <button type="Crear" class="btn btn-primary">Crear</button>
+
+  </form>
+
+  <br>
+  <br>
+
+</div>
+
+{{>foot}}
